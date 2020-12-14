@@ -15,5 +15,5 @@
 homepage: "https://www.clickdefense.io"
 documentation: "https://www.clickdefense.io/terms-and-conditions.html"
 versions:
-  - sha: 5f02a788b90ae804f86b04aa24af8937e567874a
+  - sha: b1290c1942e737157a4ba0ac00c7729176c834f1
     changeNotes: Initial Version
