@@ -14,6 +14,7 @@ ___INFO___
   "version": 1,
   "securityGroups": [],
   "displayName": "ClickDefense Pixel",
+  "categories": ["ADVERTISING", "ANALYTICS"],
   "brand": {
     "id": "brand_dummy",
     "displayName": "",
