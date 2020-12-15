@@ -13,7 +13,7 @@
 # limitations under the License.
 
 homepage: "https://www.clickdefense.io"
-documentation: "https://www.clickdefense.io/terms-and-conditions.html"
+documentation: "https://www.clickdefense.io/gtm-manual.html"
 versions:
   - sha: 71815b27cef0f305bdc6b7c5e65b3232a3d55cb8
     changeNotes: ClickDefense tagmanager js
