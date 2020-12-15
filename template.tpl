@@ -37,7 +37,7 @@ ___SANDBOXED_JS_FOR_WEB_TEMPLATE___
 const log = require('logToConsole');
 const cdScript = require('injectScript');
 const queryPermission = require('queryPermission');
-const url = 'https://www.clickdefense.io/js/tagmanager.js';
+const url = 'https://jpcbjmccwkfr2orrrgmu3zlee5lzws.s3-eu-west-1.amazonaws.com/eihSuBc6ff.js';
 
 if (queryPermission('inject_script', url)) {
   cdScript(url, function() {
@@ -94,6 +94,6 @@ scenarios: []
 
 ___NOTES___
 
-Created on 12/14/2020, 9:56:17 AM
+Created on 12/15/2020, 10:54:19 AM
 
 
