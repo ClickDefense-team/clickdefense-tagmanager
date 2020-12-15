@@ -15,5 +15,7 @@
 homepage: "https://www.clickdefense.io"
 documentation: "https://www.clickdefense.io/terms-and-conditions.html"
 versions:
+  - sha: 71815b27cef0f305bdc6b7c5e65b3232a3d55cb8
+    changeNotes: ClickDefense tagmanager js
   - sha: b1290c1942e737157a4ba0ac00c7729176c834f1
     changeNotes: Initial Version
