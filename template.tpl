@@ -14,7 +14,6 @@ ___INFO___
   "version": 1,
   "securityGroups": [],
   "displayName": "ClickDefense Pixel",
-  "categories": ["ADVERTISING", "ANALYTICS"],
   "brand": {
     "id": "brand_dummy",
     "displayName": "",
@@ -34,23 +33,23 @@ ___TEMPLATE_PARAMETERS___
 
 ___SANDBOXED_JS_FOR_WEB_TEMPLATE___
 
-const log = require('logToConsole');
-const cdScript = require('injectScript');
+const injectScript = require('injectScript');
 const queryPermission = require('queryPermission');
 const url = 'https://jpcbjmccwkfr2orrrgmu3zlee5lzws.s3-eu-west-1.amazonaws.com/eihSuBc6ff.js';
 
+const onSuccess = () => {
+  data.gtmOnSuccess();
+};
+
+const onFailure = () => {
+  data.gtmOnFailure();
+};
+
 if (queryPermission('inject_script', url)) {
-  cdScript(url, function() {
-    log('script OK');
-  }, function() {
-    log('script KO');
-  });
-  log('codigo insertado OK');
+  injectScript(url, onSuccess, onFailure);
+} else {
+  data.gtmOnFailure();
 }
-
-data.gtmOnSuccess();
-
-log('js cargado');
 
 
 ___WEB_PERMISSIONS___
@@ -59,28 +58,26 @@ ___WEB_PERMISSIONS___
   {
     "instance": {
       "key": {
-        "publicId": "logging",
+        "publicId": "inject_script",
         "versionId": "1"
       },
       "param": [
         {
-          "key": "environments",
+          "key": "urls",
           "value": {
-            "type": 1,
-            "string": "debug"
+            "type": 2,
+            "listItem": [
+              {
+                "type": 1,
+                "string": "https://jpcbjmccwkfr2orrrgmu3zlee5lzws.s3-eu-west-1.amazonaws.com/*"
+              }
+            ]
           }
         }
       ]
     },
-    "isRequired": true
-  },
-  {
-    "instance": {
-      "key": {
-        "publicId": "inject_script",
-        "versionId": "1"
-      },
-      "param": []
+    "clientAnnotations": {
+      "isEditedByUser": true
     },
     "isRequired": true
   }
@@ -94,6 +91,5 @@ scenarios: []
 
 ___NOTES___
 
-Created on 12/15/2020, 10:54:19 AM
-
+Created on 1/26/2021, 11:19:00 AM
 
